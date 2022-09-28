@@ -3,13 +3,13 @@ import Input from '../../UI/Input'
 
 import React from 'react'
 
-const MealItemForm = () => {
+const MealItemForm = (props) => {
     return (
         <form className={classes.form}>
             <Input
-                label='amount'
+                label='Amount'
                 input={{
-                    id: 'amount',
+                    id: props.id,
                     min: '1',
                     max: '5',
                     step: '1',
