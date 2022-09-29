@@ -7,7 +7,7 @@ const HeaderCartButton = (props) => {
 
     const cartctx = useContext(CartContext);
     const cartValue = cartctx.items.reduce((acc, curr) => {
-        return acc + curr.amount
+        return acc + curr.price
 
     }, 0)
 
@@ -17,7 +17,7 @@ const HeaderCartButton = (props) => {
         setCartNumber(cartctx.items.length)
     }, [cartNumber, cartctx.items])
 
-    console.log(cartctx.items.length);
+    // console.log(cartValue);
 
     return (
         <button className={classes.button} onClick={() => props.onCartClick(true)}>

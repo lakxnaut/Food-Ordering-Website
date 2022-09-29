@@ -10,6 +10,12 @@ const Cart = (props) => {
 
 
     const crtctx = useContext(CartContext)
+
+
+    const cartValue = crtctx.items.reduce((acc, curr) => {
+        return acc + curr.price
+
+    }, 0)
     return (
         <Modal>
             <ul className={classes['cart-items']}>
@@ -31,7 +37,7 @@ const Cart = (props) => {
             </ul>
             <div className={classes.total}>
                 <span>Total Amount</span>
-                <span>120</span>
+                <span>{cartValue}</span>
             </div>
             <div className={classes.actions}>
                 <button onClick={() => { props.onCartClick(false) }} className={classes['button--alt']}>Close</button>
