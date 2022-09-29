@@ -1,6 +1,6 @@
 .cart-items {
   list-style: none;
-  margin: 0;
+  margin: 10px;
   padding: 0;
   max-height: 20rem;
   overflow: auto;
@@ -43,4 +43,35 @@
 .actions .button {
   background-color: #8a2b06;
   color: white;
+}
+.cartbutton {
+  align-items: center;
+}
+.li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid rgb(231, 160, 160);
+  margin: 10px auto;
+  padding: 15px 0;
+}
+
+.button--minus {
+  color: #8a2b06;
+  padding: 4px 10px;
+  border-radius: 3px;
+  border: 1px solid #e87171;
+  margin: 2px;
+}
+
+.button--plus {
+  background: #8a2b06;
+  padding: 4px 10px;
+  border-radius: 3px;
+  border: 1px solid #e87171;
+  margin: 2px;
+}
+
+.button--plus:hover {
+  color: green;
+  cursor: pointer;
 }
